@@ -1,0 +1,362 @@
+@import "_absolute_fill";
+
+@mixin set-header-height($new-header-height) {
+  .header {
+    height: $new-header-height;
+  }
+}
+
+@mixin set-logo-size($new-logo-size) {
+  .header {
+    .logo {
+      height: $new-logo-size;
+      width: $new-logo-size;
+    }
+  }
+}
+
+@mixin set-logo-left-margin($new-margin) {
+  .header {
+    .logo {
+      margin-left: $new-margin;
+    }
+  }
+}
+
+@mixin set-social-media-links-padding($new-padding) {
+  .footer {
+    .social-media-links {
+      padding: $new-padding;
+    }
+  }
+}
+
+@mixin set-social-media-link-container-width($new-width) {
+  .footer {
+    .social-media-links {
+      .social-media-link-container {
+        width: $new-width;
+      }
+    }
+  }
+}
+
+@mixin set-social-media-link-size($new-link-width, $new-link-height) {
+  .footer {
+    .social-media-links {
+      .social-media-link-container {
+        .social-media-link {
+          width: $new-link-width;
+          padding-top: $new-link-height;
+        }
+      }
+    }
+  }
+}
+
+@mixin set-sub-footer-font-size($new-font-size) {
+  .footer {
+    .sub-footer {
+      font-size: $new-font-size;
+      .mobile-menu {
+        .back-to-top {
+          .back-to-top-icon {
+            width: $new-font-size;
+            height: $new-font-size;
+            margin-bottom: (-9/40) * $new-font-size;
+            margin-left: (15/40) * $new-font-size;
+          }
+        }
+      }
+      .site-info {
+        .help {
+          .help-content {
+            margin-top: $new-font-size / 5;
+            .help-icon {
+              margin: $new-font-size / -5 (13/15) * $new-font-size 0 0;
+              font-size: (4/3) * $new-font-size;
+              height: (5/3) * $new-font-size;
+              width: (5/3) * $new-font-size;
+            }
+          }
+        }
+      }
+      .follow-links {
+        .follow-text,
+        .follow-link {
+          margin: (13/15) * $new-font-size;
+        }
+        .follow-link {
+          .follow-link-icon {
+            height: auto;
+            width: (5/3) * $new-font-size;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin display-mobile-menu() {
+  .footer {
+    .sub-footer {
+      flex-direction: column;
+      padding-top: (75/600) * 100%;
+
+      .mobile-menu {
+        display: flex;
+        padding-bottom: (125/600) * 100%;
+      }
+      .site-info {
+        justify-content: flex-start;
+        padding-bottom: (50/600) * 100%;
+      }
+      .follow-links {
+        justify-content: flex-start;
+
+        .follow-text {
+          display: none;
+        }
+        .follow-link {
+          margin-top: 0;
+          &:nth-child(2) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-title-font-size($new-font-size) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit {
+          .title {
+            font-size: $new-font-size;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-explore-font-size($new-font-size) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit {
+          .explore-call-to-action {
+            .explore-text {
+              font-size: $new-font-size;
+            }
+            .explore-icon-container {
+              .explore-icon {
+                width: $new-font-size;
+                height: $new-font-size;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-explore-bottom($new-bottom) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit {
+          .explore-call-to-action {
+            bottom: $new-bottom;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-title-bottom($new-bottom) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit {
+          .title {
+            bottom: $new-bottom;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin set-title-image-width($new-title-image-width) {
+  .content {
+    .summary {
+      .title-image {
+        width: $new-title-image-width;
+        height: $new-title-image-width * (56/387);
+      }
+    }
+  }
+}
+
+@mixin set-summary-title-font-size($new-font-size) {
+  .content {
+    .summary {
+      .title {
+        font-size: $new-font-size;
+      }
+    }
+  }
+}
+
+@mixin set-summary-text-font-size($new-font-size) {
+  .content {
+    .summary {
+      .summary-text {
+        font-size: $new-font-size;
+      }
+    }
+  }
+}
+
+@mixin set-summary-text-horizontal-padding($new-horizontal-padding) {
+  .content {
+    .summary {
+      .summary-text {
+        padding-left: $new-horizontal-padding;
+        padding-right: $new-horizontal-padding;
+      }
+    }
+  }
+}
+
+@mixin set-summary-text-line-height($new-line-height) {
+  .content {
+    .summary {
+      .summary-text {
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+@mixin set-summary-text-line-display($new-display) {
+  .content {
+    .summary {
+      .summary-text {
+        .summary-line {
+          display: $new-display;
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibits-header-width($new-width) {
+  .content {
+    .exhibits-container {
+      .exhibits-header {
+        .exhibits-header-image {
+          max-width: $new-width;
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibits-header-vertical-padding($new-padding-top, $new-padding-bottom) {
+  .content {
+    .exhibits-container {
+      .exhibits-header {
+        padding-top: $new-padding-top;
+        padding-bottom: $new-padding-bottom;
+      }
+    }
+  }
+}
+
+@mixin set-exhibits-flex-flow($new-flex-flow) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        flex-flow: $new-flex-flow;
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-margin($new-margin) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit {
+          margin: $new-margin
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-margin-first-child($new-margin) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit:first-child {
+          margin: $new-margin;
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-margin-last-child($new-margin) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit:last-child {
+          margin: $new-margin;
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-width($new-width) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit {
+          width: $new-width;
+        }
+      }
+    }
+  }
+}
+
+@mixin set-exhibit-height-ratio($new-ratio) {
+  .content {
+    .exhibits-container {
+      .exhibits {
+        .exhibit {
+          padding-top: $new-ratio * 100%;
+        }
+      }
+    }
+  }
+}
+
+@mixin set-modal-close-button-font-size($new-size) {
+  .content {
+    .modal-backdrop {
+      .modal-display {
+        .modal-close {
+          font-size: $new-size;
+        }
+      }
+    }
+  }
+}

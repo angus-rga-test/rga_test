@@ -1,0 +1,25 @@
+@import "_media_query_override";
+
+@media (max-width : 1180px) {
+  @include set-exhibit-title-font-size(25px);
+}
+@media (max-width : 1080px) {
+  @include set-exhibit-title-font-size(22px);
+}
+@media (max-width : 910px) {
+  @include set-exhibit-title-font-size(19px);
+}
+@media (max-width : 800px) {
+  @include set-exhibit-title-font-size(17px);
+}
+@media (max-width : 715px) {
+  @include set-exhibit-title-font-size(15px);
+  @include set-sub-footer-font-size(13px);
+}
+@media (max-width : 650px) {
+  @include set-sub-footer-font-size(12px);
+}
+@media (max-width : 625px) {
+  @include set-exhibit-title-font-size(13px);
+  @include set-sub-footer-font-size(11px);
+}

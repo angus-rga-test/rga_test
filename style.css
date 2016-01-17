@@ -1,0 +1,476 @@
+body {
+  margin: 0; }
+
+/* Default */
+@font-face {
+  font-family: 'Matryoshka';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Matryoshka"), url("fonts/denne-sketchy-webfont.eot?#iefix") format("embedded-opentype"), url(fonts/matryoshka.woff) format("woff"), url(fonts/matryoshka.woff2) format("woff2"), url(fonts/matryoshka.ttf) format("truetype"), url("fonts/matryoshka.svg#matryoshka") format("svg"); }
+
+@font-face {
+  font-family: 'Denne Sketchy';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/denne-sketchy-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/denne-sketchy-webfont.woff2") format("woff2"), url("fonts/denne-sketchy-webfont.woff") format("woff"), url("fonts/denne-sketchy-webfont.ttf") format("truetype"), url("fonts/denne-sketchy-webfont.svg#denne__sketchyregular") format("svg"); }
+
+@font-face {
+  font-family: 'Roboto Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Roboto-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Roboto-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto Slab Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/RobotoSlab-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Roboto-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'DenneMissing';
+  src: local("Matryoshka"), url(fonts/matryoshka.woff) format("woff"), local("Markerfelt"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+24, U+7C; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(50, 50, 50, 0.9);
+  display: flex;
+  justify-content: center;
+  z-index: 99999; }
+  .modal-backdrop .modal-display {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 100%; }
+    .modal-backdrop .modal-display .modal {
+      width: 90%;
+      position: relative;
+      padding-top: 50.625%;
+      margin: 0 5%; }
+      .modal-backdrop .modal-display .modal ng-transclude {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0; }
+      .modal-backdrop .modal-display .modal .modal-close {
+        font-family: "Denne Sketchy";
+        cursor: pointer;
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: -30px;
+        right: -30px; }
+
+.header {
+  height: 70px;
+  margin-bottom: 42px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  flex-flow: column; }
+  .header .logo {
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px; }
+
+.content .summary {
+  text-align: center;
+  margin-bottom: 43px; }
+  .content .summary .title-image {
+    width: 200px;
+    height: 28.9405684755px; }
+  .content .summary .title {
+    font-family: "Denne Sketchy";
+    font-size: 84px; }
+  .content .summary .summary-text {
+    font-family: "Roboto Light";
+    color: #898989;
+    font-size: 15px;
+    margin-top: 13px;
+    line-height: 1.6; }
+    .content .summary .summary-text .summary-line {
+      display: block; }
+
+.content .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+  .content .video-container iframe,
+  .content .video-container object,
+  .content .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.content .exhibits-container {
+  text-align: center; }
+  .content .exhibits-container .exhibits-header {
+    width: 100%;
+    padding: 45px 0 35px; }
+    .content .exhibits-container .exhibits-header .exhibits-header-image {
+      max-width: 31.7866666667%; }
+  .content .exhibits-container .exhibits {
+    display: flex; }
+    .content .exhibits-container .exhibits .exhibit {
+      background-size: 100% 100%;
+      background-position: center;
+      cursor: pointer;
+      margin: 1.16% 0.58%;
+      padding-top: 34.8347031963%;
+      position: relative;
+      width: 31.7866666667%; }
+      .content .exhibits-container .exhibits .exhibit:first-child {
+        margin-left: 1.16%; }
+      .content .exhibits-container .exhibits .exhibit:last-child {
+        margin-right: 1.16%; }
+      .content .exhibits-container .exhibits .exhibit .exhibit-gradient {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.65);
+        background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.65), transparent);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), transparent); }
+      .content .exhibits-container .exhibits .exhibit .title, .content .exhibits-container .exhibits .exhibit .explore-call-to-action {
+        position: absolute;
+        left: 12.3287671233%; }
+      .content .exhibits-container .exhibits .exhibit .title {
+        bottom: 22.5%;
+        color: white;
+        font-family: "Roboto Slab Light";
+        font-size: 27px; }
+        .content .exhibits-container .exhibits .exhibit .title .title-line {
+          text-align: left; }
+      .content .exhibits-container .exhibits .exhibit .explore-call-to-action {
+        display: flex;
+        bottom: 10%;
+        color: #4285f4;
+        font-family: "Roboto Medium";
+        font-size: 15px; }
+        .content .exhibits-container .exhibits .exhibit .explore-call-to-action .explore-text {
+          display: flex;
+          justify-content: center;
+          flex-flow: column;
+          text-transform: uppercase; }
+        .content .exhibits-container .exhibits .exhibit .explore-call-to-action .explore-icon-container {
+          display: flex;
+          justify-content: center;
+          flex-flow: column; }
+          .content .exhibits-container .exhibits .exhibit .explore-call-to-action .explore-icon-container .explore-icon {
+            padding-left: 15px;
+            width: 15px;
+            height: 15px; }
+
+.footer .social-media-links {
+  display: flex;
+  background-color: #448bff;
+  padding: 0 34.1066666667%;
+  text-align: center;
+  justify-content: space-around; }
+  .footer .social-media-links .social-media-link-container {
+    margin-top: 57px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column; }
+    .footer .social-media-links .social-media-link-container .social-media-link {
+      width: 27px;
+      padding-top: 27px;
+      position: relative; }
+      .footer .social-media-links .social-media-link-container .social-media-link .social-media-link-icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat; }
+
+.footer .sub-footer {
+  font-family: "Roboto Medium";
+  font-size: 15px;
+  color: #a3a3a3;
+  padding: 0 5.2447552448%;
+  display: flex;
+  justify-content: space-between;
+  height: 125px; }
+  .footer .sub-footer .mobile-menu {
+    display: none;
+    flex-direction: row-reverse;
+    width: 89.5104895105%; }
+    .footer .sub-footer .mobile-menu .back-to-top {
+      float: right; }
+      .footer .sub-footer .mobile-menu .back-to-top .back-to-top-text,
+      .footer .sub-footer .mobile-menu .back-to-top .back-to-top-icon {
+        display: inline-block; }
+      .footer .sub-footer .mobile-menu .back-to-top .back-to-top-icon {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(images/back_to_top.png);
+        width: 15px;
+        height: 15px;
+        margin-bottom: -9px; }
+  .footer .sub-footer .site-info {
+    display: flex;
+    justify-content: center; }
+    .footer .sub-footer .site-info .site-info-section {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      margin: 0 14px; }
+    .footer .sub-footer .site-info .help .help-content {
+      margin-top: 3px; }
+      .footer .sub-footer .site-info .help .help-content .help-icon {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        background-image: url(images/talk_bubble.png);
+        background-size: 100% 100%;
+        background-position: center;
+        text-align: center;
+        margin: -3px 13px 0 0;
+        color: white;
+        font-family: "Roboto Bold";
+        font-size: 20px;
+        height: 25px;
+        width: 25px;
+        float: left; }
+      .footer .sub-footer .site-info .help .help-content .help-text {
+        display: flex;
+        justify-content: center;
+        flex-flow: column; }
+  .footer .sub-footer .follow-links {
+    display: flex;
+    justify-content: center; }
+    .footer .sub-footer .follow-links .follow-text,
+    .footer .sub-footer .follow-links .follow-link {
+      margin: 13px; }
+    .footer .sub-footer .follow-links .follow-text {
+      display: flex;
+      justify-content: center;
+      flex-flow: column; }
+    .footer .sub-footer .follow-links .follow-link {
+      display: flex;
+      justify-content: center;
+      flex-flow: column; }
+      .footer .sub-footer .follow-links .follow-link .follow-link-icon {
+        height: auto;
+        width: 22px; }
+
+@media (max-width: 1180px) {
+  .content .exhibits-container .exhibits .exhibit .title {
+    font-size: 25px; } }
+
+@media (max-width: 1080px) {
+  .content .exhibits-container .exhibits .exhibit .title {
+    font-size: 22px; } }
+
+@media (max-width: 910px) {
+  .content .exhibits-container .exhibits .exhibit .title {
+    font-size: 19px; } }
+
+@media (max-width: 800px) {
+  .content .exhibits-container .exhibits .exhibit .title {
+    font-size: 17px; } }
+
+@media (max-width: 715px) {
+  .content .exhibits-container .exhibits .exhibit .title {
+    font-size: 15px; }
+  .footer .sub-footer {
+    font-size: 13px; }
+    .footer .sub-footer .mobile-menu .back-to-top .back-to-top-icon {
+      width: 13px;
+      height: 13px;
+      margin-bottom: -2.925px;
+      margin-left: 4.875px; }
+    .footer .sub-footer .site-info .help .help-content {
+      margin-top: 2.6px; }
+      .footer .sub-footer .site-info .help .help-content .help-icon {
+        margin: -2.6px 11.2666666667px 0 0;
+        font-size: 17.3333333333px;
+        height: 21.6666666667px;
+        width: 21.6666666667px; }
+    .footer .sub-footer .follow-links .follow-text,
+    .footer .sub-footer .follow-links .follow-link {
+      margin: 11.2666666667px; }
+    .footer .sub-footer .follow-links .follow-link .follow-link-icon {
+      height: auto;
+      width: 21.6666666667px; } }
+
+@media (max-width: 650px) {
+  .footer .sub-footer {
+    font-size: 12px; }
+    .footer .sub-footer .mobile-menu .back-to-top .back-to-top-icon {
+      width: 12px;
+      height: 12px;
+      margin-bottom: -2.7px;
+      margin-left: 4.5px; }
+    .footer .sub-footer .site-info .help .help-content {
+      margin-top: 2.4px; }
+      .footer .sub-footer .site-info .help .help-content .help-icon {
+        margin: -2.4px 10.4px 0 0;
+        font-size: 16px;
+        height: 20px;
+        width: 20px; }
+    .footer .sub-footer .follow-links .follow-text,
+    .footer .sub-footer .follow-links .follow-link {
+      margin: 10.4px; }
+    .footer .sub-footer .follow-links .follow-link .follow-link-icon {
+      height: auto;
+      width: 20px; } }
+
+@media (max-width: 625px) {
+  .content .exhibits-container .exhibits .exhibit .title {
+    font-size: 13px; }
+  .footer .sub-footer {
+    font-size: 11px; }
+    .footer .sub-footer .mobile-menu .back-to-top .back-to-top-icon {
+      width: 11px;
+      height: 11px;
+      margin-bottom: -2.475px;
+      margin-left: 4.125px; }
+    .footer .sub-footer .site-info .help .help-content {
+      margin-top: 2.2px; }
+      .footer .sub-footer .site-info .help .help-content .help-icon {
+        margin: -2.2px 9.5333333333px 0 0;
+        font-size: 14.6666666667px;
+        height: 18.3333333333px;
+        width: 18.3333333333px; }
+    .footer .sub-footer .follow-links .follow-text,
+    .footer .sub-footer .follow-links .follow-link {
+      margin: 9.5333333333px; }
+    .footer .sub-footer .follow-links .follow-link .follow-link-icon {
+      height: auto;
+      width: 18.3333333333px; } }
+
+/* Tablets (portrait and landscape) ----------- */
+/* Tablets (landscape) ----------- */
+/* Tablets (portrait) ----------- */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 300px) and (max-device-width: 670px) {
+  .content .exhibits-container .exhibits .exhibit .title {
+    font-size: 20px; }
+  .content .summary .title {
+    font-size: 140px; }
+  .content .summary .title-image {
+    width: 485px;
+    height: 70.180878553px; }
+  .content .summary .summary-text {
+    font-size: 25px; }
+  .content .summary .summary-text .summary-line {
+    display: inline; }
+  .content .summary .summary-text {
+    padding-left: 5.8%;
+    padding-right: 5.8%; }
+  .content .summary .summary-text {
+    line-height: 1.6; }
+  .content .exhibits-container .exhibits-header .exhibits-header-image {
+    max-width: 58.3%; }
+  .content .exhibits-container .exhibits-header {
+    padding-top: 65px;
+    padding-bottom: 55px; }
+  .content .exhibits-container .exhibits {
+    flex-flow: column; }
+  .content .exhibits-container .exhibits .exhibit {
+    margin: 13px 0; }
+  .content .exhibits-container .exhibits .exhibit:first-child {
+    margin: 0 0 13px; }
+  .content .exhibits-container .exhibits .exhibit:last-child {
+    margin: 13px 0 0; }
+  .content .exhibits-container .exhibits .exhibit {
+    width: 100%; }
+  .content .exhibits-container .exhibits .exhibit {
+    padding-top: 110%; }
+  .content .exhibits-container .exhibits .exhibit .title {
+    font-size: 70px; }
+  .content .exhibits-container .exhibits .exhibit .explore-call-to-action .explore-text {
+    font-size: 45px; }
+  .content .exhibits-container .exhibits .exhibit .explore-call-to-action .explore-icon-container .explore-icon {
+    width: 45px;
+    height: 45px; }
+  .content .exhibits-container .exhibits .exhibit .explore-call-to-action {
+    bottom: 8.3333333333%; }
+  .content .exhibits-container .exhibits .exhibit .title {
+    bottom: 21.9696969697%; }
+  .header {
+    height: 190px; }
+  .header .logo {
+    height: 136px;
+    width: 136px; }
+  .header .logo {
+    margin-left: 55px; }
+  .footer .social-media-links .social-media-link-container {
+    width: 9.1%; }
+  .footer .social-media-links {
+    padding: 8.8333333333% 0 7.3333333333%; }
+  .footer .social-media-links .social-media-link-container .social-media-link {
+    width: 100%;
+    padding-top: 100%; }
+  .footer .sub-footer {
+    font-size: 40px; }
+    .footer .sub-footer .mobile-menu .back-to-top .back-to-top-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: -9px;
+      margin-left: 15px; }
+    .footer .sub-footer .site-info .help .help-content {
+      margin-top: 8px; }
+      .footer .sub-footer .site-info .help .help-content .help-icon {
+        margin: -8px 34.6666666667px 0 0;
+        font-size: 53.3333333333px;
+        height: 66.6666666667px;
+        width: 66.6666666667px; }
+    .footer .sub-footer .follow-links .follow-text,
+    .footer .sub-footer .follow-links .follow-link {
+      margin: 34.6666666667px; }
+    .footer .sub-footer .follow-links .follow-link .follow-link-icon {
+      height: auto;
+      width: 66.6666666667px; }
+  .footer .sub-footer {
+    flex-direction: column;
+    padding-top: 12.5%; }
+    .footer .sub-footer .mobile-menu {
+      display: flex;
+      padding-bottom: 20.8333333333%; }
+    .footer .sub-footer .site-info {
+      justify-content: flex-start;
+      padding-bottom: 8.3333333333%; }
+    .footer .sub-footer .follow-links {
+      justify-content: flex-start; }
+      .footer .sub-footer .follow-links .follow-text {
+        display: none; }
+      .footer .sub-footer .follow-links .follow-link {
+        margin-top: 0; }
+        .footer .sub-footer .follow-links .follow-link:nth-child(2) {
+          margin-left: 0; }
+  .content .modal-backdrop .modal-display .modal-close {
+    font-size: 40px; } }
+
+/*# sourceMappingURL=style.css.map */

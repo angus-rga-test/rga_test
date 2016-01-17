@@ -1,0 +1,307 @@
+@import "_drop_shadow";
+@import "_linear_gradient";
+@import "_fonts";
+@import "_flex";
+@import "_absolute_fill";
+
+$light-color: rgb(255,255,255);
+$mid-color: rgb(137,137,137);
+$mid-light-color: rgb(163,163,163);
+$dark-color: rgb(0,0,0);
+$explore-color: rgb(66,133,244);
+$modal-backdrop-color: rgba(50,50,50,0.9);
+$social-media-bar-color: rgb(68,139,255);
+$exhibit-margin: 1.16%;
+$exhibit-width: (100% / 3) - ($exhibit-margin * 4 / 3);
+$youtube-aspect-ratio-for-padding-top: 315/560;
+$youtube-modal-width: 90%;
+$big-number: 99999;
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $modal-backdrop-color;
+  @include flex-center();
+  z-index: $big-number;
+
+  .modal-display {
+    @include flex-center-vertical();
+    width: 100%;
+
+    .modal {
+      width: 90%;
+      position: relative;
+      padding-top: $youtube-aspect-ratio-for-padding-top * $youtube-modal-width;
+      margin: 0 (100% - $youtube-modal-width) / 2;
+
+      ng-transclude {
+        @include absolute-fill();
+      }
+      .modal-close {
+        font-family: "Denne Sketchy";
+        cursor: pointer;
+        color: $light-color;
+        font-size: 30px;
+        position: absolute;
+        top: -30px;
+        right: -30px;
+      }
+    }
+  }
+                                                                                                                                                                                    }
+
+.header {
+  height: $header-height;
+  margin-bottom: $header-margin-bottom;
+  @include drop-shadow(0, 2px, 5px, 0, rgba(0,0,0,0.25));
+  @include flex-center-vertical();
+  .logo {
+    height: $logo-size;
+    width: $logo-size;
+    margin-top: ($header-height - $logo-size) / 2;
+    margin-left: ($header-height - $logo-size) / 2;
+  }
+}
+
+.content {
+  .summary {
+    text-align: center;
+    margin-bottom: $summary-margin-bottom;
+    .title-image {
+      width: $title-image-width;
+      height: $title-image-width * (56/387);
+    }
+    .title {
+      font-family: "Denne Sketchy";
+      font-size: $summary-title-font-size;
+    }
+    .summary-text {
+      font-family: "Roboto Light";
+      color: $mid-color;
+      font-size: $summary-text-font-size;
+      margin-top: $summary-text-margin-top;
+      line-height: 1.6;
+      .summary-line {
+        display: $summary-line-display;
+      }
+    }
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .exhibits-container {
+    text-align: center;
+
+    .exhibits-header {
+      width: 100%;
+      padding: 45px 0 35px;
+      .exhibits-header-image {
+        max-width: $exhibit-width;
+
+      }
+    }
+    .exhibits {
+      display: flex;
+
+      .exhibit {
+        background-size: 100% 100%;
+        background-position: center;
+        cursor: pointer;
+        margin: $exhibit-margin 0.58%;
+        padding-top: $exhibit-width * (800 / 730);
+        position: relative;
+        width: $exhibit-width;
+
+        &:first-child {
+          margin-left: 1.16%;
+        }
+        &:last-child {
+          margin-right: 1.16%;
+        }
+
+        .exhibit-gradient {
+          position: absolute;
+          top: 50%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          @include linear-gradient(0deg, rgba(0,0,0,0.65), rgba(0,0,0,0));
+        }
+
+        .title, .explore-call-to-action {
+          position: absolute;
+          $something: (90 / 730) * 100%;
+          left: $something;
+        }
+
+        .title {
+          $title-bottom: (180/800) * 100%;
+          bottom: $title-bottom;
+          color: $light-color;
+          font-family: "Roboto Slab Light";
+          font-size: $exhibit-title-font-size;
+          .title-line {
+            text-align: left;
+          }
+        }
+
+        .explore-call-to-action {
+          display: flex;
+          bottom: 10%;
+          color: $explore-color;
+          font-family: "Roboto Medium";
+          font-size: 15px;
+
+          .explore-text {
+            @include flex-center-vertical();
+            text-transform: uppercase;
+          }
+          .explore-icon-container {
+            @include flex-center-vertical();
+            .explore-icon {
+              padding-left: 15px;
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+
+  .social-media-links {
+    display: flex;
+    background-color: $social-media-bar-color;
+    padding: 0 $exhibit-width + $exhibit-margin * 2;
+    text-align: center;
+    justify-content: space-around;
+
+    .social-media-link-container {
+      margin-top: 57px;
+      margin-bottom: 50px;
+      @include flex-center-vertical();
+
+      .social-media-link {
+        width: 27px;
+        padding-top: 27px;
+        position: relative;
+
+        .social-media-link-icon {
+          @include absolute-fill();
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  .sub-footer {
+    font-family: "Roboto Medium";
+    font-size: 15px;
+    color: $mid-light-color;
+    padding: 0 ((120/2288) * 100%);
+    display: flex;
+    justify-content: space-between;
+    height: 125px;
+
+    .mobile-menu {
+      display: none;
+      flex-direction: row-reverse;
+      width: 100% - ((120/2288) * 200%);
+
+      .back-to-top {
+        float: right;
+
+        .back-to-top-text,
+        .back-to-top-icon {
+          display: inline-block;
+        }
+
+        .back-to-top-text {}
+        .back-to-top-icon {
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url(images/back_to_top.png);
+          width: 15px;
+          height: 15px;
+          margin-bottom: -9px;
+        }
+      }
+    }
+    .site-info {
+      @include flex-center();
+
+      .site-info-section {
+        @include flex-center-vertical();
+        margin: 0 14px;
+      }
+      .help {
+        .help-content {
+          margin-top: 3px;
+          .help-icon {
+            @include flex-center-vertical();
+            background-image: url(images/talk_bubble.png);
+            background-size: 100% 100%;
+            background-position: center;
+            text-align: center;
+            margin: -3px 13px 0 0;
+
+            color: $light-color;
+            font-family: "Roboto Bold";
+            font-size: 20px;
+            height: 25px;
+            width: 25px;
+            float: left;
+          }
+          .help-text {
+            @include flex-center-vertical();
+          }
+        }
+      }
+      .privacy {}
+      .language-selection {}
+    }
+    .follow-links {
+      @include flex-center();
+
+      .follow-text,
+      .follow-link {
+        margin: 13px;
+      }
+
+      .follow-text {
+        @include flex-center-vertical();
+      }
+
+      .follow-link {
+        @include flex-center-vertical();
+
+        .follow-link-icon {
+          height: auto;
+          width: 22px;
+        }
+      }
+    }
+  }
+}

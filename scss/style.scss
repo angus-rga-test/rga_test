@@ -1,0 +1,22 @@
+@import "_media_query_override";
+
+body {
+  margin: 0;
+}
+
+/* Default */
+$header-height: 70px;
+$logo-size: 50px;
+$summary-title-font-size: 84px;
+$summary-text-font-size: 15px;
+$summary-line-display: block;
+$title-image-width: 200px;
+$header-margin-bottom: 42px;
+$summary-margin-bottom: 43px;
+$summary-text-margin-top: 13px;
+$exhibit-title-font-size: 27px;
+
+@import "base";
+@import "desktop_style";
+@import "tablet_style";
+@import "mobile_style";

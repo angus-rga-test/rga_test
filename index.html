@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mst3k">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+</head>
+<body>
+    <div class="header" ng-controller="HeaderController as header">
+        <img class="logo" ng-src="{{header.logo}}"/>
+    </div>
+
+    <div class="content" ng-controller="ShowSummaryController as showSummary">
+        <div class="summary" ng-include="showSummary.show.summaryTemplate">
+        </div>
+
+        <div class="video-container">
+            <iframe ng-src="{{showSummary.show.iFrameVideoLink}}"
+                    allowfullscreen
+                    frameborder="0"
+                    width="560"
+                    height="315"></iframe>
+        </div>
+
+        <div class="exhibits-container">
+            <div class="exhibits-header" ng-include="showSummary.show.exhibitHeaderTemplate">
+            </div>
+            <div class="exhibits">
+                <div ng-repeat="exhibit in showSummary.show.exhibits"
+                     ng-style="exhibit.getStyle()"
+                     ng-click="showSummary.selectExhibit(exhibit)"
+                     class="exhibit">
+                    <div class="exhibit-gradient"></div>
+                    <div class="title">
+                        <div class="title-line"
+                                ng-repeat="titleLine in exhibit.titleLines"
+                                ng-bind="titleLine">
+                        </div>
+                    </div>
+                    <div class="explore-call-to-action">
+                        <div class="explore-text">Explore</div>
+                        <div class="explore-icon-container">
+                            <img class="explore-icon" src="images/exhibits/arrow.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <i-frame-modal visible="showSummary.exhibitionModalOpen"
+                      i-frame-link="showSummary.selectedExhibit.iFrameVideoLink">
+        </i-frame-modal>
+    </div>
+
+    <div class="footer" ng-controller="FooterController as footer">
+        <div class="social-media-links">
+            <div class="social-media-link-container"
+                 ng-repeat="socialMediaLink in footer.socialMediaLinks">
+                <a class="social-media-link"
+                     ng-href="{{socialMediaLink.link}}">
+                    <div class="social-media-link-icon"
+                         ng-style="{
+                                'background-image': 'url(' + socialMediaLink.icon + ')'
+                            }"
+                    ></div>
+                </a>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div class="mobile-menu">
+                <div class="back-to-top" ng-click="footer.scrollToTop()">
+                    <div class="back-to-top-text">Back to Top</div>
+                    <div class="back-to-top-icon"></div>
+                </div>
+            </div>
+            <div class="site-info">
+                <div class="site-info-section help">
+                    <div class="help-content">
+                        <div class="help-icon">?</div>
+                        <div class="help-text">Help</div>
+                    </div>
+                </div>
+                <div class="site-info-section privacy">
+                    Privacy & Terms
+                </div>
+                <div class="site-info-section language-selection">
+                    English
+                </div>
+            </div>
+            <div class="follow-links">
+                <div class="follow-text">
+                    Follow us on:
+                </div>
+                <div class="follow-link"
+                        ng-repeat="followLink in footer.followLinks">
+                    <a ng-href="{{followLink.link}}">
+                        <img class="follow-link-icon" ng-src="{{followLink.icon}}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="main.min.js"></script>
+</body>
+</html>
