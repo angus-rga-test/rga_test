@@ -9,6 +9,12 @@
         ]
     );
 
+    /**
+     * Handle the footer
+     * @param IconLink
+     * @param $element
+     * @constructor
+     */
     function FooterController(
         IconLink,
         $element

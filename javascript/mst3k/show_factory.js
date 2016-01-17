@@ -18,6 +18,10 @@
         Exhibit
     ) {
 
+        /**
+         * Contain information about a show
+         * @constructor
+         */
         function Show() {
             BaseModel.apply(this);
         }

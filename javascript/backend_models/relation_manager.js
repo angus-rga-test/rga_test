@@ -1,5 +1,8 @@
 (function() {
 
+    /**
+     * Manages how models relate to one another
+     */
     angular.module('backendModels').factory('relationManager', [
         'Relation',
         'getFirstDefined',

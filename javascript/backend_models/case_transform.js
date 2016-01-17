@@ -1,5 +1,8 @@
 (function() {
 
+    /**
+     * Used to convert python snake_case values to camelCase
+     */
     angular.module('backendModels').factory('caseTransform', caseTransformFactory);
 
     function caseTransformFactory() {

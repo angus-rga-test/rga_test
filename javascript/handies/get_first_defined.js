@@ -1,5 +1,8 @@
 (function() {
 
+    /**
+     * Returns the first defined argument, handy for setting up default values
+     */
     angular.module('handies').factory('getFirstDefined', getFirstDefinedFactory);
 
     function getFirstDefinedFactory() {

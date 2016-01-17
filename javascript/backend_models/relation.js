@@ -1,5 +1,8 @@
 (function() {
 
+    /**
+     * Useful for storing relation info
+     */
     angular.module('backendModels').factory('Relation', RelationFactory);
 
     /**

@@ -7,6 +7,10 @@
         ]
     );
 
+    /**
+     * Handle the header
+     * @constructor
+     */
     function HeaderController() {
         this.logo = 'images/logo.png';
     }

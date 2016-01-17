@@ -14,6 +14,13 @@
         extend
     ) {
 
+        /**
+         * Contains information relating to an exhibit
+         * @param titleLines
+         * @param backgroundImageUrl
+         * @param iFrameVideoLink
+         * @constructor
+         */
         function Exhibit(titleLines, backgroundImageUrl, iFrameVideoLink) {
 
             this.titleLines = titleLines;

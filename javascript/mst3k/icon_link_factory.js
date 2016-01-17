@@ -14,6 +14,12 @@
         extend
     ) {
 
+        /**
+         * Handle an icon link
+         * @param icon
+         * @param link
+         * @constructor
+         */
         function IconLink(icon, link) {
             this.icon = icon;
             this.link = link;

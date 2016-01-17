@@ -10,6 +10,13 @@
         ]
     );
 
+    /**
+     * Handle the show summary page
+     * @param Show
+     * @param $sce
+     * @param Exhibit
+     * @constructor
+     */
     function ShowSummaryController(
         Show,
         $sce,

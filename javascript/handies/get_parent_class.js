@@ -1,5 +1,8 @@
 (function() {
 
+    /**
+     * Return the instance's parent class
+     */
     angular.module('handies').factory('getParentClass', getParentClassFactory);
 
     function getParentClassFactory() {

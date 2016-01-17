@@ -1,5 +1,8 @@
 (function() {
 
+    /**
+     * Useful for loading a model instance with data from JSON
+     */
     angular.module('backendModels').factory('populateInstance', [
         'relationManager',
         'caseTransform',

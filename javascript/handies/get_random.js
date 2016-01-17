@@ -1,4 +1,8 @@
 (function() {
+
+    /**
+     * Easy random
+     */
     angular.module('handies').factory('getRandom', getRandomFactory);
 
     function getRandomFactory() {

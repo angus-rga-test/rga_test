@@ -1,5 +1,8 @@
 (function() {
 
+    /**
+     * Useful for populating models from JSON data
+     */
     angular.module('backendModels').factory('createPopulatedInstances', [
         'createPopulatedInstance',
         createPopulatedInstancesFactory
