@@ -14,7 +14,7 @@ $social-media-bar-color: rgb(68,139,255);
 $exhibit-margin: 1.16%;
 $exhibit-width: (100% / 3) - ($exhibit-margin * 4 / 3);
 $youtube-aspect-ratio-for-padding-top: 315/560;
-$youtube-modal-width: 90%;
+$youtube-modal-width: 80%;
 $big-number: 99999;
 
 .modal-backdrop {
@@ -32,7 +32,7 @@ $big-number: 99999;
     width: 100%;
 
     .modal {
-      width: 90%;
+      width: $youtube-modal-width;
       position: relative;
       padding-top: $youtube-aspect-ratio-for-padding-top * $youtube-modal-width;
       margin: 0 (100% - $youtube-modal-width) / 2;

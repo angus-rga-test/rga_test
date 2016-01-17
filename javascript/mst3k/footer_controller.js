@@ -35,6 +35,9 @@
         this.scrollToTop = scrollToTop;
     }
 
+    /**
+     * Scroll to the top of the page
+     */
     function scrollToTop() {
         angular.element("html, body").animate({
             scrollTop: 0
